@@ -1,0 +1,5 @@
+title: DominikFancyDining
+collections:
+  projects:
+    output: true
+    layout: project;
