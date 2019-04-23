@@ -37,5 +37,6 @@ window.onresize = function () {
 
 window.onload = function () {
     $("#welcome").fadeIn(5000).css("display", "inline-block");
+    $("#mynav").fadeIn(5000).css("display", "inline-block");
     setInterval(onTimerTick, 33);
 };
