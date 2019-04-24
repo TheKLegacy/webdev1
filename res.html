@@ -4,8 +4,6 @@ layout: default
 ---
 <script src="formDateGen.js"></script>
 <script src="formValidate.js"></script>
-
-<body  onload="generateForm()">
 	<div id="form-body" class="container">
 		<header>
 			<h1 class="text-center page-header">Dom's Fancy Dining Reservations</h1><br><br>
@@ -16,28 +14,28 @@ layout: default
 				<div class="row">
 					<div class="col-md-6"> 
 							<div class="form-group row">
-								<label for="name" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Name on Reservation</label>
+								<label for="name" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Name on Reservation:</label>
 								<div class="col-sm-7 col-md-12 col-lg-7">
 									<input autofocus type="text" id="name" name="name" class="form-control form-control-sm" placeholder="Enter name">
 									<div id="name-warning" class="warning-msg"></div>
 								</div>
 							</div>
 							<div class="form-group row">
-								<label for="tel" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Contact Phone Number</label>
+								<label for="tel" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Contact Phone Number:</label>
 								<div class="col-sm-7 col-md-12 col-lg-7">
-									<input type="text" id="tel" name="tel" class="form-control form-control-sm" title="Enter password">
+									<input type="text" id="tel" name="tel" class="form-control form-control-sm">
 									<div id="tel-warning" class="warning-msg"></div>
 								</div>
 							</div>
 							<div class="form-group row">
-								<label for="email" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Email Address</label>
+								<label for="email" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Email Address:</label>
 								<div class="col-sm-7 col-md-12 col-lg-7">
 									<input type="text" id="email" name="email" class="form-control form-control-sm">
 									<div id="email-warning" class="warning-msg"></div>
 								</div>
 							</div>
 							<div class="form-group row">
-								<label for="numGuests" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Number of Guests</label>
+								<label for="numGuests" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Number of Guests: (1-60)</label>
 								<div class="col-sm-2 col-md-12 col-lg-2">
 									<input size="2" type="text" id="numGuests" name="numGuests" class="form-control form-control-sm">
 								</div>
@@ -47,21 +45,18 @@ layout: default
 							<div class="form-group row col-auto dateForm">
 									<label class="col-6" for="month">Month</label>
 									<select onchange="genFormDays(false)" class="form-control-sm col-6" id="month" name="month"> 
-										<!--Empty option for validation-->
 										<option value="">-</option>
 									</select>
 							</div>
 							<div class="form-group row col-auto dateForm">
 								<label class="col-6" for="day">Day</label>
 								<select class="form-control-sm col-6" id="day" name="day"> 
-									<!--Empty option for validation-->
 									<option value="">-</option>
 								</select>
 							</div>
 							<div class="form-group row col-auto dateForm">
 								<label class="col-6" for="year">Year</label>
 								<select onchange="genFormDays(false)" class="form-control-sm col-6" id="year" name="year"> 
-									<!--Empty option for validation-->
 									<option value="">-</option>
 								</select>
 							</div>
@@ -86,33 +81,33 @@ layout: default
 						Courses<br>
 						<div class="form-check">
 							<input type="checkbox" class="form-check-input" id="appetizers" name="appetizers" value="yes">
-							<label for="appetizers">Appetizers</label>
+							<label for="appetizers">&nbsp;Appetizers</label>
 						</div>
 						<div class="form-check">
 							<input type="checkbox" class="form-check-input" id="soupsal" name="soupsal" value="yes">
-							<label for="soupsal">Soup & Salad</label>
+							<label for="soupsal">&nbsp;Soup & Salad</label>
 						</div>
 						<div class="form-check">
 							<input type="checkbox" class="form-check-input" id="entre" name="entre" value="yes">
-							<label for="entre">Entr&eacute;</label>
+							<label for="entre">&nbsp;Entr&eacute;e</label>
 						</div>
 						<div class="form-check">
 							<input type="checkbox" class="form-check-input" id="dessert" name="dessert" value="yes">
-							<label for="dessert">Dessert</label>
+							<label for="dessert">&nbsp;Dessert</label>
 						</div>
 						<fieldset>
 							<legend>Desired Menu</legend>
 							<div class="form-check">
 								<input type="radio" class="form-check-input" id="breakfeast" name="meal" value="breakfeast">
-								<label for="breakfeast">Breakfeast</label>
+								<label for="breakfeast">&nbsp;Breakfeast</label>
 							</div>
 							<div class="form-check">
 								<input type="radio" class="form-check-input" id="lunch" name="meal" value="lunch">
-								<label for="lunch">Lunch</label>
+								<label for="lunch">&nbsp;Lunch</label>
 							</div>
 							<div class="form-check">
 								<input type="radio" class="form-check-input" id="dinner" name="meal" value="dinner">
-								<label for="dinner">Dinner</label>
+								<label for="dinner">&nbsp;Dinner</label>
 							</div>
 							<div id="meal-warning" class="warning-msg"></div>
 						</fieldset>

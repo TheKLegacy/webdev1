@@ -12,9 +12,9 @@ function onTimerTick()
     ctx.globalAlpha = alpha;
     alpha = (alpha > 1)? 1 : alpha + 0.0005;
     ctx.strokeStyle = "#fff";
-    if(c.width > 800 && c.height > 600)
+    if(c.width > 800 && c.height > 770)
     {
-        ctx.strokeText("Dom's Fancy Dining", c.width/2, c.height/2-60);
+        ctx.strokeText("Dom's Fancy Dining", c.width/2, c.height/2-140);
     }
 }
 
@@ -22,13 +22,13 @@ window.onresize = function () {
     c.width = $("#logo-container").width();
     c.height = $("#logo-container").height() - $("#mynav").height();
     console.log(c.height);
-    if(c.width > 800 && c.height > 600)
+    if(c.width > 800 && c.height > 770)
     {
         $("#logo").css("opacity", "100");
         ctx.font = c.width*0.12 + "px Lobster";
         ctx.textAlign = "center";
         ctx.strokeStyle = "#fff";
-        ctx.strokeText("Dom's Fancy Dining", c.width/2, c.height/2-60);
+        ctx.strokeText("Dom's Fancy Dining", c.width/2, c.height/2-140);
     }
     else
     {
