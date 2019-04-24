@@ -99,3 +99,9 @@ footer p {
   float: right;
   margin: 0px 8px 0px 0px; 
 }
+
+.warning-msg {
+  max-height: 36px;
+  min-height: 36px;
+  color: red;
+}

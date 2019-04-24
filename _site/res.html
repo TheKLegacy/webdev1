@@ -42,56 +42,59 @@
 <body  onload="generateForm()">
 	<div id="form-body" class="container">
 		<header>
-			<h1 class="text-center">Dom's Fancy Dining Reservations</h1>
+			<h1 class="text-center page-header">Dom's Fancy Dining Reservations</h1><br><br>
 		</header> 
 		
-			<form action="https://cpscserv.dom.edu/faculty/jhelwig/formConfirm.php" method="post">
+			<form onsubmit="return verifyForm()" onreset="clearErrs()" action="https://cpscserv.dom.edu/faculty/jhelwig/formConfirm.php" method="post">
 				<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6"> 
 							<div class="form-group row">
 								<label for="name" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Name on Reservation</label>
 								<div class="col-sm-7 col-md-12 col-lg-7">
-									<input autofocus required type="text" id="name" name="name" class="form-control form-control-sm" placeholder="Enter name">
+									<input autofocus type="text" id="name" name="name" class="form-control form-control-sm" placeholder="Enter name">
+									<div id="name-warning" class="warning-msg"></div>
 								</div>
 							</div>
 							<div class="form-group row">
-								<label for="tel" class="col-sm-6 col-md-12 col-lg-6 col-form-label text-nowrap">Contact Phone Number</label>
-								<div class="col-sm-6 col-md-12 col-lg-6">
-									<input required type="number" id="tel" oninput="setPhonenumberLength()" name="tel" class="form-control form-control-sm" title="Enter password">
+								<label for="tel" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Contact Phone Number</label>
+								<div class="col-sm-7 col-md-12 col-lg-7">
+									<input type="text" id="tel" name="tel" class="form-control form-control-sm" title="Enter password">
+									<div id="tel-warning" class="warning-msg"></div>
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="email" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Email Address</label>
 								<div class="col-sm-7 col-md-12 col-lg-7">
-									<input required type="email" id="email" name="email" class="form-control form-control-sm">
+									<input type="text" id="email" name="email" class="form-control form-control-sm">
+									<div id="email-warning" class="warning-msg"></div>
 								</div>
 							</div>
 							<div class="form-group row">
-								<label for="numGuests" class="col-5 col-form-label text-nowrap">Number of Guests</label>
-								<div class="col-3"></div>
-								<div class="col-4">
-									<input required type="number" id="numGuests" name="numGuests" min="0" max="60" class="form-control form-control-sm">
+								<label for="numGuests" class="col-sm-5 col-md-12 col-lg-5 col-form-label text-nowrap">Number of Guests</label>
+								<div class="col-sm-2 col-md-12 col-lg-2">
+									<input size="2" type="text" id="numGuests" name="numGuests" class="form-control form-control-sm">
 								</div>
+								<div id="num-warning" class="warning-msg col-sm-5 col-md-12 col-lg-5"></div>
 							</div>
 						<div class="row align-items-center">
 							<div class="form-group row col-auto dateForm">
 									<label class="col-6" for="month">Month</label>
-									<select required onchange="genFormDays(false)" class="form-control-sm col-6" id="month" name="month"> 
+									<select onchange="genFormDays(false)" class="form-control-sm col-6" id="month" name="month"> 
 										<!--Empty option for validation-->
 										<option value="">-</option>
 									</select>
 							</div>
 							<div class="form-group row col-auto dateForm">
 								<label class="col-6" for="day">Day</label>
-								<select required class="form-control-sm col-6" id="day" name="day"> 
+								<select class="form-control-sm col-6" id="day" name="day"> 
 									<!--Empty option for validation-->
 									<option value="">-</option>
 								</select>
 							</div>
 							<div class="form-group row col-auto dateForm">
 								<label class="col-6" for="year">Year</label>
-								<select required onchange="genFormDays(false)" class="form-control-sm col-6" id="year" name="year"> 
+								<select onchange="genFormDays(false)" class="form-control-sm col-6" id="year" name="year"> 
 									<!--Empty option for validation-->
 									<option value="">-</option>
 								</select>
@@ -145,19 +148,20 @@
 								<input type="radio" class="form-check-input" id="dinner" name="meal" value="dinner">
 								<label for="dinner">Dinner</label>
 							</div>
+							<div id="meal-warning" class="warning-msg"></div>
 						</fieldset>
 				</div>
 			</div>
 			</div>
 			<div class="text-center">
 				<input class="btn btn-dark" type="submit" value="Submit Reservation">&nbsp;&nbsp;&nbsp;&nbsp;
-				<input class="btn btn-dark" type="reset" value="Reset Reservation">
+				<input class="btn btn-dark" type="reset"  value="Reset Reservation">
 				</div>
 			</form>
 	</div>
       </main>
       <br><br><br>
-<footer>
+<footer id="foot">
     <p>&copy; 2019 Dom's Fancy Dining</p>
 </footer>
   </body>

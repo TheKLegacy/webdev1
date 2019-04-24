@@ -86,16 +86,6 @@ function genFormMonths()
 	document.getElementById("month").innerHTML=monthOptions;
 }
 
-//Keep phone number at 10 digits
-function setPhonenumberLength() {
-	var number = document.getElementById("tel").value;
-	console.log(number);
-	if (number.length > 10)
-	{
-		document.getElementById("tel").value = number.slice(0,10); 
-	}
-}
-
 window.onload = function () {
     generateForm(true);
 };
