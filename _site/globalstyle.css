@@ -73,9 +73,8 @@ footer p {
   position: absolute;
   bottom: 140px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: rgba(20,20,20,80);
+  background-color: rgba(40,40,40,0.8);
   border-radius: 4px; 
   padding: 24px;
   display: none;
@@ -84,24 +83,37 @@ footer p {
 
 .page-header {
   margin-top: 32px;
+  text-align: center;
+  font-size: 4em;
+  font-family: lobster;
 }
 
 .float-right {
   float: right;
-  margin: 0px 0px 8px 0px;
+  margin: 0px 0px 0px 18px;
 }
 
-.text-image {
-  height: 128px;
+.about-image {
+  height: 192px;
 }
 
 .float-left {
   float: right;
-  margin: 0px 8px 0px 0px; 
+  margin: 0px 18px 0px 0px
 }
 
 .warning-msg {
   max-height: 36px;
   min-height: 36px;
   color: red;
+}
+
+.card {
+  margin: 16px;
+  width: 18em;
+  height: 22em;
+}
+
+#about-txt p{
+  font-size: 1.1em;
 }
