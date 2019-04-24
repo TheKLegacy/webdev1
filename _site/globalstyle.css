@@ -11,7 +11,7 @@ body {
 }
 
 nav ul li a {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .nav-link {
@@ -29,7 +29,7 @@ nav ul li a {
 }
 
 .navbar-nav .nav-item .nav-link {
-  width: 140px;
+  width: 120px;
 }
 
 footer {
